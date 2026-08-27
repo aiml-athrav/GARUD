@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-image: url('./images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fluid Flexbox HUD Grid */
+.hud-root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: transparent; /* Or maybe the image here too? Since it covers everything */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glowing Sci-Fi Header */
+.hud-header {
+  height: 10vh;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: transparent;
+}
+
+.hud-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hud-title {
+  color: #ff9f1c;
+  font-family: 'monospace';
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(255, 159, 28, 0.5);
+  margin: 0;
+}
+
+.hud-subtitle {
+  color: rgba(255, 159, 28, 0.6);
+  font-family: 'monospace';
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 4px 0 0 0;
+}
+
+/* Main HUD Body Workspace */
+.hud-workspace {
+  flex-grow: 1;
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 90vh;
+}
+
+/* Left & Right Sidebars */
+.hud-sidebar-left {
+  width: 16%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.hud-sidebar-right {
+  width: 18%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+/* Center Interactive Canvas Core */
+.hud-center-core {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: transparent;
+}
+
+/* Cybernetic Box styling with glowing corner brackets */
+.cyber-box {
+  position: relative;
+  background: transparent;
+  padding: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Cyan Cyan Variant for specific panels like System Status */
+.cyber-box-cyan {
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

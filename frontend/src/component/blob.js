@@ -343,7 +343,7 @@ export default function MicReactiveCore() {
       const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer YOUR_GROQ_API_KEY',
+          'Authorization': `Bearer ${process.env.REACT_APP_GROQ_API_KEY}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -542,7 +542,7 @@ export default function MicReactiveCore() {
       const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer YOUR_GROQ_API_KEY`,
+          'Authorization': `Bearer ${process.env.REACT_APP_GROQ_API_KEY}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
